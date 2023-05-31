@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const wrapList = document.getElementById('wrap-list');
+  const burgerList = document.getElementById('burger-list');
   const orderList = document.getElementById('order-list');
   const submitOrderButton = document.getElementById('submit-order');
 
-  // Массив с врапами
-  const wraps = [
+    // Массив с врапами
+  const burgers = [
     { name: 'Cesar', price: 450, image: '1.jpeg' },
     { name: 'Kimchi', price: 400, image: '2.jpeg' },
     { name: 'Wrapper', price: 600, image: '3.jpeg' },
@@ -13,18 +13,18 @@ document.addEventListener('DOMContentLoaded', function() {
   ];
 
   // Отображение врапов в меню
-  wraps.forEach(function(wrap) {
+  burgers.forEach(function(burger) {
     const li = document.createElement('li');
     const img = document.createElement('img');
-    img.src = wrap.image;
-    img.alt = wrap.name;
+    img.src = burger.image;
+    img.alt = burger.name;
     li.appendChild(img);
     const namePrice = document.createElement('div');
     namePrice.classList.add('name-price');
     const name = document.createElement('span');
-    name.innerText = wrap.name;
+    name.innerText = burger.name;
     const price = document.createElement('span');
-    price.innerText = wrap.price + ' руб';
+    price.innerText = burger.price + ' руб';
     namePrice.appendChild(name);
     namePrice.appendChild(price);
     li.appendChild(namePrice);
@@ -32,19 +32,19 @@ document.addEventListener('DOMContentLoaded', function() {
       const orderLi = document.createElement('li');
       orderLi.innerHTML = `
         <div class="order-item">
-          <img src="${wrap.image}" alt="${wrap.name}">
+          <img src="${burger.image}" alt="${burger.name}">
           <div class="order-details">
-            <span>${wrap.name}</span>
-            <span>${wrap.price} руб</span>
+            <span>${burger.name}</span>
+            <span>${burger.price} руб</span>
             <div class="add-ons">
               <label>
-                <input type="checkbox" name="add-on" value="cheese"> Сыр
+                <input type="checkbox" name="add-on" value="cheese"> Доп. сыр
               </label>
               <label>
                 <input type="checkbox" name="add-on" value="bacon"> Бекон
               </label>
               <label>
-                <input type="checkbox" name="add-on" value="jalapenos"> Халапеньо
+                <input type="checkbox" name="add-on" value="pickles"> Маринованные огурцы
               </label>
             </div>
             <div class="sauces">
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
       `;
       orderList.appendChild(orderLi);
     });
-    wrapList.appendChild(li);
+    burgerList.appendChild(li);
   });
 
   // Обработчик кнопки "Отправить заказ"
