@@ -16,6 +16,7 @@ h1 {
 
 main {
   margin: 20px;
+  overflow: hidden; /* Добавлено */
 }
 
 h2 {
@@ -46,4 +47,6 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
+  position: relative; /* Добавлено */
+  z-index: 1; /* Добавлено */
 }
