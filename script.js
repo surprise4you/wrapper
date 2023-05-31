@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Массив с врапами
   const wraps = [
-    { name: 'Cesar', price: 450, image: '1.jpg' },
-    { name: 'Kimchi', price: 400, image: '2.jpg' },
-    { name: 'Wrapper', price: 600, image: '3.jpg' },
-    { name: 'Morning', price: 400, image: '4.jpg' },
-    { name: 'Pesto', price: 350, image: '5.jpg' }
+    { name: 'Cesar', price: 450, image: '1.jpeg' },
+    { name: 'Kimchi', price: 400, image: '2.jpeg' },
+    { name: 'Wrapper', price: 600, image: '3.jpeg' },
+    { name: 'Morning', price: 400, image: '4.jpeg' },
+    { name: 'Pesto', price: 350, image: '5.jpeg' }
   ];
 
   // Отображение врапов в меню
